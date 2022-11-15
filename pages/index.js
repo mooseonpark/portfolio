@@ -192,7 +192,22 @@ export default function Home() {
 	);
 }
 
-export async function getStaticProps(context) {
+// build time에 호출. 데이터 가져온 뒤 화면에 렌더링 되는것. (한번)
+export async function getStaticProps() {
+	const options = {
+		method: 'POST',
+		headers: {
+			accept: 'application/json',
+			'Notion-Version': '2022-06-28',
+			'content-type': 'application/json',
+		},
+		body: JSON.stringify({ page_size: 100 }),
+	};
+
+	fetch('https://api.notion.com/v1/databases/database_id/query', options)
+		.then((response) => response.json())
+		.then((response) => console.log(response))
+		.catch((err) => console.error(err));
 	return {
 		props: {}, // will be passed to the page component as props
 	};
