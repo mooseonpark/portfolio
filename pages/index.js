@@ -8,6 +8,8 @@ import {
 } from 'react-icons/ai';
 import Image from 'next/image';
 import dev from '../public/developer.gif';
+import code from '../public/code.png';
+import consulting from '../public/consulting.png';
 
 export default function Home() {
 	return (
@@ -53,6 +55,31 @@ export default function Home() {
 					</div>
 					<div className="relative rounded-full items-center w-80 mt-20 mx-auto">
 						<Image src={dev} />
+					</div>
+				</section>
+				<section>
+					<div>
+						<h3 className="text-3xl py-1 mt-20">Services I offer</h3>
+						<p className="text-md py-2 leading-8 text-gray-800">
+							It is a long established fact that a reader will be distracted by
+							the readable content of a page when looking at its layout. The
+							point of using Lorem Ipsum is that it has a more-or-less normal
+							distribution of letters, as opposed to using 'Content here,
+							content here', making it look like readable English. Many desktop
+							publishing packages and web page editors now use Lorem Ipsum as
+							their default model text, and a search for 'lorem ipsum' will
+							uncover many web sites still in their infancy. Various versions
+							have evolved over the years, sometimes by accident, sometimes on
+							purpose (injected humour and the like).
+						</p>
+					</div>
+					<div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
+						<Image src={code} width={100} height={100} className="mx-auto" />
+						<h3 className="text-lg font-medium pt-8 pb-2 ">Skills I use</h3>
+						<h4 className="py-4 text-teal-600">Learning & Growing with</h4>
+						<p className="text-gray-800 py-1">HTML/CSS</p>
+						<p className="text-gray-800 py-1">JAVASCRIPT</p>
+						<p className="text-gray-800 py-1">REACT.JS</p>
 					</div>
 				</section>
 			</main>
