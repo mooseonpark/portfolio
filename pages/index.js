@@ -6,11 +6,12 @@ import dev from '../public/developer.gif';
 import code from '../public/code.png';
 import consulting from '../public/consulting.png';
 import wesop1 from '../public/wesop1.gif';
+import needed from '../public/needed.gif';
+import pf from '../public/pf.gif';
 import { useState } from 'react';
 
 export default function Home() {
 	const [darkMode, setDarkMode] = useState(false);
-	const [showButton, setShowButton] = useState(false);
 
 	const scrollToTop = () => {
 		window.scroll({
@@ -74,7 +75,7 @@ export default function Home() {
 							📧 whomsp@gmail
 						</span>
 						<span className="text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-slate-400">
-							📱 010-2024-2977
+							📱 (+82) 010-2024-2977
 						</span>
 					</div>
 					<div className="text-5xl flex justify-center gap-16 py-3 text-gray-700 dark:text-slate-300">
@@ -120,10 +121,14 @@ export default function Home() {
 							<Image src={code} width={100} height={100} className="mx-auto" />
 							<h3 className="text-lg font-medium pt-8 pb-2 ">Skills I use</h3>
 							<h4 className="py-4 text-teal-600">Learning & Growing with</h4>
-							<p className="text-gray-800 py-1">HTML5/CSS3</p>
-							<p className="text-gray-800 py-1">JAVASCRIPT</p>
-							<p className="text-gray-800 py-1">REACT.JS</p>
-							<p className="text-gray-800 py-1">GIT</p>
+							<p className="text-gray-800 py-1">
+								Language : Html5/Css3 Javascript
+							</p>
+							<p className="text-gray-800 py-1">Framework : ReactJS NextJS</p>
+							<p className="text-gray-800 py-1">
+								UI Library : Styled-Components Sass
+							</p>
+							<p className="text-gray-800 py-1">DVCS : GIT</p>
 						</div>
 						<div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white flex-1">
 							<Image
@@ -143,33 +148,47 @@ export default function Home() {
 				<section>
 					<div>
 						<h3 className="text-3xl py-1 dark:text-slate-50">Portfolio</h3>
-						<p className="text-gray-800 py-1 dark:text-slate-400">HTML/CSS</p>
+						<p className="text-gray-800 py-1 dark:text-slate-400">
+							Team Project & Personal Project
+						</p>
 					</div>
 					<div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
 						<div className="basis-1/3 flex-1">
-							<h1>Wesop</h1>
+							<button className="bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded dark:text-slate-300 mb-5">
+								<a href="https://jumpy-panther-e57.notion.site/Wesop-project-c2654f3618f043bcb39e7189b4149817">
+									WESOP PROJECT
+								</a>
+							</button>
 							<Image
 								src={wesop1}
 								className="rounded-lg object-cover"
 								width={'100%'}
 								height={'100%'}
-								layout="responsive"
+								// layout="responsive"
 							/>
 						</div>
 						<div className="basis-1/3 flex-1">
-							<h1>Needed</h1>
+							<button className="bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded dark:text-slate-300 mb-5">
+								<a href="https://jumpy-panther-e57.notion.site/Needed-f7ec5fda61d747c693dfa81cc1d8142a">
+									NEEDED PROJECT
+								</a>
+							</button>
 							<Image
-								src={wesop1}
+								src={needed}
 								className="rounded-lg object-cover"
 								width={'100%'}
 								height={'100%'}
-								layout="responsive"
+								// layout="responsive"
 							/>
 						</div>
 						<div className="basis-1/3 flex-1">
-							<h1>portfolio</h1>
+							<button className="bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:text-white py-2 px-4 border border-teal-500 hover:border-transparent rounded dark:text-slate-300 mb-5">
+								<a href="https://jumpy-panther-e57.notion.site/portfolio-0e6d5470ed0b46afb4375ed7df3ab8d1">
+									PERSONAL PROJECT
+								</a>
+							</button>
 							<Image
-								src={wesop1}
+								src={pf}
 								className="rounded-lg object-cover"
 								width={'100%'}
 								height={'100%'}
@@ -190,25 +209,4 @@ export default function Home() {
 			</main>
 		</div>
 	);
-}
-
-// build time에 호출. 데이터 가져온 뒤 화면에 렌더링 되는것. (한번)
-export async function getStaticProps() {
-	const options = {
-		method: 'POST',
-		headers: {
-			accept: 'application/json',
-			'Notion-Version': '2022-06-28',
-			'content-type': 'application/json',
-		},
-		body: JSON.stringify({ page_size: 100 }),
-	};
-
-	fetch('https://api.notion.com/v1/databases/database_id/query', options)
-		.then((response) => response.json())
-		.then((response) => console.log(response))
-		.catch((err) => console.error(err));
-	return {
-		props: {}, // will be passed to the page component as props
-	};
 }
