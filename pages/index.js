@@ -72,7 +72,7 @@ export default function Home() {
 					</h4>
 					<div className="text-center text-lg flex flex-col">
 						<span className="text-md leading-8 text-gray-800 md:text-xl dark:text-slate-400">
-							📧 whomsp@gmail
+							📧 whomsp@gmail.com
 						</span>
 						<span className="text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-slate-400">
 							📱 (+82) 010-2024-2977
