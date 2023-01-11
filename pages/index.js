@@ -8,6 +8,7 @@ import consulting from '../public/consulting.png';
 import wesop1 from '../public/wesop1.gif';
 import needed from '../public/needed.gif';
 import pf from '../public/pf.gif';
+import earthcam from '../public/earthcam.gif';
 import { useState } from 'react';
 
 export default function Home() {
@@ -195,11 +196,27 @@ export default function Home() {
 								layout="responsive"
 							/>
 						</div>
+						<div className="basis-1/3 flex-1">
+							<button className="bg-transparent hover:bg-emerald-500 text-emerald-700 font-semibold hover:line-through py-2 px-4 border border-teal-500 hover:border-transparent rounded dark:text-slate-300 mb-5;">
+								World Live Cam PROJECT
+							</button>
+							<p className="text-lg font-bold">
+								* Building a project now - Google maps & Youtube Api를 활용하여
+								세계 실시간 라이브 카메라 모음 사이트 제작중
+							</p>
+							<Image
+								src={earthcam}
+								className="rounded-lg object-cover"
+								width={'100%'}
+								height={'100%'}
+								// layout="responsive"
+							/>
+						</div>
 					</div>
 				</section>
 				<div className="text-center">
 					<button
-						className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded dark:text-slate-900 mb-20"
+						className="bg-teal-500 hover:bg-teal-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded dark:text-slate-900 mb-20"
 						onClick={scrollToTop}
 					>
 						👆
