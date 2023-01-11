@@ -59,7 +59,7 @@ export default function Home() {
 							FrontEnd Developer
 						</h3>
 						<p className="text-slate-700 dark:text-slate-400 italic">
-							Last updated @ 2022-11
+							Last updated @ 2022-12
 						</p>
 						<p className="text-md py-5 leading-8 text-gray-800 md:text-xl dark:text-slate-400">
 							Thanks for visiting my webpage!
@@ -201,8 +201,10 @@ export default function Home() {
 								World Live Cam PROJECT
 							</button>
 							<p className="text-lg font-bold">
-								* Building a project now - Google maps & Youtube Api를 활용하여
-								세계 실시간 라이브 카메라 모음 사이트 제작중
+								* Building a project now -
+								<br />
+								Google maps & Youtube Api를 활용하여 세계 실시간 라이브 카메라
+								모음 사이트 제작중
 							</p>
 							<Image
 								src={earthcam}
